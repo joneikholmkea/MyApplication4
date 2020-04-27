@@ -29,8 +29,5 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
-    public void buttonPressed(View view){
-        Log.i("all", "yo pressed btn");
-    }
 
 }

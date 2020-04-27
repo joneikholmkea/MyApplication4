@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import com.joneikholm.myapplication4.R;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-
+    private Button button;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -32,12 +33,11 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        button = root.findViewById(R.id.button);
+        button.setOnClickListener(view -> {
+            Toast.makeText(view.getContext(), "you rock", Toast.LENGTH_LONG).show();
+        });
         return root;
     }
 
-    public void buttonPressed(View view){
-
-        Toast.makeText(view.getContext(), "you rock", Toast.LENGTH_LONG).show();
-
-    }
 }

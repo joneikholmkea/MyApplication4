@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -35,6 +36,8 @@ public class HomeFragment extends Fragment {
     }
 
     public void buttonPressed(View view){
-        Log.i("all", "yo pressed btn");
+
+        Toast.makeText(view.getContext(), "you rock", Toast.LENGTH_LONG).show();
+
     }
 }
